@@ -1,6 +1,10 @@
 <?php
 session_start();
-/* $_SESSION['username'] = $_POST['name']; */
+if(empty($_GET['do'])){
+   } else if ($_GET['do'] == 'logout') { 
+    unset($_SESSION['username']);
+    session_destroy();
+   };
 ?>
 
 <!DOCTYPE html>
@@ -15,11 +19,11 @@ session_start();
 <body>
      <header>
         <h1>Добро пожаловать в СПА-салон "SPA Thai"</h1>
-        <!-- <a class="button" href="login.php" target="_blank">Войти</a> -->
     <?php 
         if($_SESSION == true){ 
-        echo $_SESSION['username'];
-        echo '<a class="button" href="login.php" target="_blank">Выйти</a></li>';
+        echo '<a class="username" href="" target="_blank">' . $_SESSION['username'] . '</a></li>';
+        echo ' <a href="index.php?do=logout" class = "button">Выйти</a> </li>';
+        /* echo '<form id="exit" method="post" action="index.php"><button class = "button">Выйти</button></form><a class="button"</li>'; */
     }
     else {
         echo '<a class="button" href="login.php" target="_blank">Войти</a>';

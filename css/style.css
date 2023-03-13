@@ -22,6 +22,21 @@ h1 {
     transition: color .2s;
 }
 
+.username {
+  border: none;
+  outline: none;
+  position: absolute;
+  right: 10vw;
+  top: 2vw;
+  text-decoration: none;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  letter-spacing: 2px;
+  font-size: 17px;
+  text-transform: uppercase;
+  display: inline-block;
+  transition: color .2s;
+}
+
 header::before {
     position: absolute;
     content: "";
@@ -63,10 +78,12 @@ header::before {
     display: inline-block;
     transition: color .2s;
   }
-  .menu-main a, .button, .button:visited, .menu-main a:visited {color: #ffffff;}
-  .menu-main a.current, .button:hover, .menu-main a:hover{color: #feb386;}
+  .menu-main a, .button, .button:visited, .username, .username:visited, .menu-main a:visited {color: #ffffff;}
+
+  .menu-main a.current, .button:hover, .username:hover, .menu-main a:hover{color: #feb386;}
+
   .menu-main a:before, .button:before,
-  .button:after,
+  .button:after, .username:after, .username:before,
   .menu-main a:after {
     content: "";
     position: absolute;
@@ -78,8 +95,8 @@ header::before {
     background: #feb386;
     transition: .8s;
   }
-  .menu-main a:hover:before, .button:hover:before, .menu-main .current:before {left: 0;}
-  .menu-main a:hover:after, .button:hover::after, .menu-main .current:after {right: 0;}   
+  .menu-main a:hover:before, .button:hover:before, .username:hover:before, .menu-main .current:before {left: 0;}
+  .menu-main a:hover:after, .button:hover:after, .username:hover:after, .menu-main .current:after {right: 0;}   
   @media (max-width: 550px) {
   .menu-main {padding-top: 0;}
   .menu-main li {display: block;}

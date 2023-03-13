@@ -1,6 +1,7 @@
 <?php
 session_start();
-$_SESSION['username'] = $_POST['name'];
+if(empty($_POST['name'])) {
+} else {$_SESSION['username'] = $_POST['name'];}
 ?>
 
 <!DOCTYPE html>
@@ -51,7 +52,7 @@ $_SESSION['username'] = $_POST['name'];
   /////////////////////////////////////////////////
   // Имя файла данных
   $filename = "text.txt"; 
-  // Проверяем не было ли переданное имя
+  /* // Проверяем не было ли переданное имя
   // зарегистрировано ранее
   $arr = file($filename);
   foreach($arr as $line)
@@ -67,7 +68,7 @@ $_SESSION['username'] = $_POST['name'];
   if(in_array($_POST['name'], $temp))
   {
     exit("Данное имя уже зарегистрировано, пожалуйста, выберите другое");
-  }
+  } */
 
   /////////////////////////////////////////////////
   // 3. Блок регистрации пользователя

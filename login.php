@@ -1,6 +1,7 @@
 <?php
 session_start();
-$_SESSION['username'] = $_POST['name'];
+if(empty($_POST['name'])) {
+} else {$_SESSION['username'] = $_POST['name'];}
 ?>
 
 <!DOCTYPE html>
