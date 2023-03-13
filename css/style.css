@@ -1,0 +1,143 @@
+h1 {
+    position: relative;
+    font-family: 'Arimo', sans-serif;
+    color: white;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 150px;
+    padding-top: 10px;
+}
+.button {
+    border: none;
+    outline: none;
+    position: absolute;
+    right: 2vw;
+    top: 2vw;
+    text-decoration: none;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    letter-spacing: 2px;
+    font-size: 17px;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: color .2s;
+}
+
+header::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 330px;
+    margin: 0;
+    padding: 0;
+    background: url(https://mlady.org/wp-content/uploads/2021/06/3518437218611742_5291.jpg) center no-repeat;
+    background-size: cover;
+  }
+  @import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
+  .menu-main {
+    list-style: none;
+    margin: 40px 0 5px;
+    padding: 25px 0 5px;
+    text-align: center;
+    background: white;
+  }
+  .menu-main li {display: inline-block;}
+  .menu-main li:after {
+    content: "|";
+    color: #606060;
+    display: inline-block;
+    vertical-align:top;
+  }
+  .menu-main li:last-child:after {content: none;}
+  .menu-main a {
+    text-decoration: none;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 20px;
+    margin: 0 34px 0 30px;
+    font-size: 17px;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: color .2s;
+  }
+  .menu-main a, .button, .button:visited, .menu-main a:visited {color: #ffffff;}
+  .menu-main a.current, .button:hover, .menu-main a:hover{color: #feb386;}
+  .menu-main a:before, .button:before,
+  .button:after,
+  .menu-main a:after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    top: auto;
+    right: 50%;
+    bottom: -5px;
+    left: 50%;
+    background: #feb386;
+    transition: .8s;
+  }
+  .menu-main a:hover:before, .button:hover:before, .menu-main .current:before {left: 0;}
+  .menu-main a:hover:after, .button:hover::after, .menu-main .current:after {right: 0;}   
+  @media (max-width: 550px) {
+  .menu-main {padding-top: 0;}
+  .menu-main li {display: block;}
+  .menu-main li:after {content: none;}
+  .menu-main a {
+    padding: 25px 0 20px; 
+    margin: 0 30px;
+  }
+  }
+  
+  *, *::after, *::before {
+      box-sizing: border-box;
+  }
+  
+  body {
+      margin: 0;
+      text-decoration: none;
+      font-family: 'Ubuntu Condensed', sans-serif;
+      letter-spacing: 2px;
+      font-size: 17px;
+      text-transform: uppercase;
+      color: #ffffff;
+      background: url(https://mlady.org/wp-content/uploads/2021/06/3518437218611742_5291.jpg) center no-repeat;
+      background-size: cover;
+      backdrop-filter: blur(5px)
+  }
+  
+  ul {
+      list-style: none;
+      padding: 0;
+      margin: 20px;
+  }
+  
+  h3 {
+      margin: 0;
+  }
+  
+  .products__list {
+      display: grid;
+      gap: 30px 20px;
+      grid-template-columns: repeat(3, 600px);
+      grid-template-rows: repeat(3, 400px);
+  }
+  
+  .products__item {
+      display: grid;
+      border-radius: 7px;
+      box-shadow: 0 5px 15px #d3d3d3;
+      overflow: hidden;
+  }
+  
+  .products__title {
+      padding: 10px;
+  }
+  
+  .products img {
+      display: block;
+      width: 100%;
+      margin-top: auto;
+  }
+   
